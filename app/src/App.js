@@ -1,20 +1,32 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { useState } from "react";
+import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import CartContainer from "./Components/Cart/CartContainer";
 import Catalog from "./Components/Catalog/Catalog";
 import Header from "./Components/Header/Header";
 
 function App() {
+  let [productsSum, setProductsSum] = useState(
+    !JSON.parse(localStorage.getItem("cart"))
+      ? 0
+      : JSON.parse(localStorage.getItem("cart")).length
+  );
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
-        <Header />
+        <Header productsSum={productsSum} />
         <div className="content">
-          <Route path="/catalog" component={Catalog} />
-          <Route path="/cart" component={CartContainer} />
+          <Route
+            path="/catalog"
+            render={() => <Catalog setProductsSum={setProductsSum} />}
+          />
+          <Route
+            path="/cart"
+            render={() => <CartContainer setProductsSum={setProductsSum} />}
+          />
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

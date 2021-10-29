@@ -19,6 +19,7 @@ const Cart = (props) => {
                 <Button
                   variant="outline-danger"
                   onClick={() => props.delete(i)}
+                  style={{ marginLeft: "5px", padding: "5px" }}
                 >
                   Delete this product
                 </Button>
@@ -30,12 +31,16 @@ const Cart = (props) => {
             variant="danger"
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
+            style={{ marginLeft: "15px", padding: "2px" }}
           >
             Clear the cart
           </Button>
         </div>
       )}
-      <DeletingModal setCart={props.setCart} />
+      <DeletingModal
+        setCart={props.setCart}
+        setProductsSum={props.setProductsSum}
+      />
     </div>
   );
 };

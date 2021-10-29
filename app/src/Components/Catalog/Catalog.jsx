@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import productImage from "../../Images/product.png";
 import store from "../../store/store";
 
-const Catalog = () => {
+const Catalog = (props) => {
   let cart = [];
   JSON.parse(localStorage.getItem("cart")) !== null
     ? (cart = JSON.parse(localStorage.getItem("cart")))
@@ -15,6 +15,7 @@ const Catalog = () => {
   const addToCart = (product) => {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
+    props.setProductsSum(JSON.parse(localStorage.getItem("cart")).length);
     return cart;
   };
 
@@ -30,7 +31,7 @@ const Catalog = () => {
                   <Card.Title>{i.name}</Card.Title>
                   <Card.Text>{i.label}</Card.Text>
                   <Card.Title>
-                    Price: {i.price}
+                    Price: {i.price} <br />
                     <Button
                       variant="outline-primary"
                       onClick={() => addToCart(i)}
