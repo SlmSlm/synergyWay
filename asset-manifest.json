@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/synergyWay/static/css/main.7d0290f8.chunk.css",
+    "main.js": "/synergyWay/static/js/main.028f0257.chunk.js",
+    "main.js.map": "/synergyWay/static/js/main.028f0257.chunk.js.map",
+    "runtime-main.js": "/synergyWay/static/js/runtime-main.d2e9ec87.js",
+    "runtime-main.js.map": "/synergyWay/static/js/runtime-main.d2e9ec87.js.map",
+    "static/js/2.e3a07641.chunk.js": "/synergyWay/static/js/2.e3a07641.chunk.js",
+    "static/js/2.e3a07641.chunk.js.map": "/synergyWay/static/js/2.e3a07641.chunk.js.map",
+    "static/js/3.4460bc9d.chunk.js": "/synergyWay/static/js/3.4460bc9d.chunk.js",
+    "static/js/3.4460bc9d.chunk.js.map": "/synergyWay/static/js/3.4460bc9d.chunk.js.map",
+    "index.html": "/synergyWay/index.html",
+    "static/css/main.7d0290f8.chunk.css.map": "/synergyWay/static/css/main.7d0290f8.chunk.css.map",
+    "static/js/2.e3a07641.chunk.js.LICENSE.txt": "/synergyWay/static/js/2.e3a07641.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2e9ec87.js",
+    "static/js/2.e3a07641.chunk.js",
+    "static/css/main.7d0290f8.chunk.css",
+    "static/js/main.028f0257.chunk.js"
+  ]
+}
